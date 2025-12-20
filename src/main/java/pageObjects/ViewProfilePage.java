@@ -57,6 +57,8 @@ public class ViewProfilePage extends AppiumUtils {
 
 	@AndroidFindBy(xpath = "")
 	private WebElement checkEmailStatus;
+	
+	//KYC--------------------------
 
 	@AndroidFindBy(xpath = "")
 	private WebElement checkKYCStausBeforeUdpate;
@@ -66,5 +68,29 @@ public class ViewProfilePage extends AppiumUtils {
 
 	@AndroidFindBy(xpath = "")
 	private WebElement kycPageTitle;
+	
+	//Delete Account ----------------
+	
+	@AndroidFindBy(xpath="")
+	private WebElement deleteAccountBtn;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement VerifyPopText;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement clickCancelBtn;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement clickcontinueBtn;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement enterReason;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement submitBtn;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement submissionText;
+	
 
 }

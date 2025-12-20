@@ -42,6 +42,12 @@ public class EarnHistory extends AppiumUtils {
 	private WebElement fromDate;
 	
 	@AndroidFindBy(xpath="")
+	private WebElement calCancelBtn;
+	
+	@AndroidFindBy(xpath="")
+	private WebElement calOkBtn;
+	
+	@AndroidFindBy(xpath="")
 	private WebElement toDate;
 	
 	@AndroidFindBy(xpath="")
@@ -63,18 +69,7 @@ public class EarnHistory extends AppiumUtils {
 	private WebElement selectOption;
 	
 	@AndroidFindBy(xpath="")
-	private WebElement okBtn;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	private WebElement SortOkBtn;
 	
 
 	// Methods--------------------------------------------
