@@ -11,49 +11,60 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AppiumUtils;
 
-public class RedemptionHistory extends AppiumUtils {
+public class ViewProfilePage extends AppiumUtils {
 
 	private AndroidDriver driver;
 	private WebDriverWait wait;
 	private AppiumUtils utils;
 
-	// ✅ Constructor
-	public RedemptionHistory(AndroidDriver driver) {
+	// ✅ Constructor-----------------------------------------------
+
+	public ViewProfilePage(AndroidDriver driver) {
 		this.driver = driver;
 		this.utils = new AppiumUtils(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
 	}
 
-	// PageObjects------------------------
+	// ✅ Page Objects using @AndroidFindBy---------------------------
 
 	@AndroidFindBy(xpath = "")
-	private WebElement menuBtn;
+	private WebElement myProfileBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionHistoryBtn;
+	private WebElement verifyProfileRedirectedPage;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionPageText;
+	private WebElement verifyMobileNumber;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement searchOrderId;
+	private WebElement emailAddressBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyRedirectedPage;
+	private WebElement emailPagetitle;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyOrderId;
+	private WebElement currentEmailAddress;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement clickOnRedeemedProd;
+	private WebElement newEmailAddress;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyTrackingInformationPage;
-	
-	@AndroidFindBy(xpath="")
-	private WebElement CheckProdStatus;
+	private WebElement sendVerificationLink;
 
-	// Methods------------------------------
+	@AndroidFindBy(xpath = "")
+	private WebElement updateEmailBtn;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement checkEmailStatus;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement checkKYCStausBeforeUdpate;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement kycBtn;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement kycPageTitle;
 
 }

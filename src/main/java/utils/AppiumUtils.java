@@ -62,12 +62,16 @@ public class AppiumUtils {
 
 	// ---------------------- Wait Utilities ----------------------
 	public void waitForElementToAppear(WebElement ele, String expectedText) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-	    wait.until(ExpectedConditions.textToBePresentInElement(ele, expectedText));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.textToBePresentInElement(ele, expectedText));
 	}
 
 	public void waitForClick(WebElement element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	public WebElement waitForVisibility(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	// ---------------------- Screenshot Utility ----------------------
@@ -76,6 +80,13 @@ public class AppiumUtils {
 		String destinationFile = System.getProperty("user.dir") + "/reports/" + testCaseName + ".png";
 		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
+
+	}
+
+	// ----------------------Page Navigations----------------------------
+
+	public void navigateBack() {
+		driver.navigate().back();
 	}
 
 	// ---------------------- Amount Utility ----------------------

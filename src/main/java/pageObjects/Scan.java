@@ -11,49 +11,54 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AppiumUtils;
 
-public class RedemptionHistory extends AppiumUtils {
+public class Scan extends AppiumUtils {
 
 	private AndroidDriver driver;
 	private WebDriverWait wait;
 	private AppiumUtils utils;
 
-	// ✅ Constructor
-	public RedemptionHistory(AndroidDriver driver) {
+	// ✅ Constructor-----------------------------------------------
+
+	public Scan(AndroidDriver driver) {
 		this.driver = driver;
 		this.utils = new AppiumUtils(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
 	}
 
-	// PageObjects------------------------
+	// ✅ Page Objects using @AndroidFindBy---------------------------
 
 	@AndroidFindBy(xpath = "")
-	private WebElement menuBtn;
+	private WebElement scanBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionHistoryBtn;
+	private WebElement scanpageTitle;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionPageText;
+	private WebElement howToScanCouponBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement searchOrderId;
+	private WebElement checkHowToScanCouponText;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyRedirectedPage;
+	private WebElement enterCouponNo;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyOrderId;
+	private WebElement addBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement clickOnRedeemedProd;
+	private WebElement totalCommulativePoints;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyTrackingInformationPage;
-	
-	@AndroidFindBy(xpath="")
-	private WebElement CheckProdStatus;
+	private WebElement pointsDismissBtn;
 
-	// Methods------------------------------
+	@AndroidFindBy(xpath = "")
+	private WebElement pointsAddBtn;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement errorText;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement errorOkBtn;
 
 }

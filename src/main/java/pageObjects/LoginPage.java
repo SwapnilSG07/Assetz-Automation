@@ -14,7 +14,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class LoginPage {
+public class LoginPage extends AppiumUtils{
 
 	private AndroidDriver driver;
 	private WebDriverWait wait;

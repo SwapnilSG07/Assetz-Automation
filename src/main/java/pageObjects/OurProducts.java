@@ -11,49 +11,63 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AppiumUtils;
 
-public class RedemptionHistory extends AppiumUtils {
+public class OurProducts extends AppiumUtils {
 
 	private AndroidDriver driver;
 	private WebDriverWait wait;
 	private AppiumUtils utils;
 
 	// ✅ Constructor
-	public RedemptionHistory(AndroidDriver driver) {
+	public OurProducts(AndroidDriver driver) {
 		this.driver = driver;
 		this.utils = new AppiumUtils(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
 	}
 
-	// PageObjects------------------------
+	// PageObjects----------------------------------------
 
 	@AndroidFindBy(xpath = "")
 	private WebElement menuBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionHistoryBtn;
+	private WebElement ourProductsBtn;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement redemptionPageText;
+	private WebElement productsPage;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement searchOrderId;
+	private WebElement Banner;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyRedirectedPage;
+	private WebElement clickOnProduct;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyOrderId;
+	private WebElement checkClickedProd;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement clickOnRedeemedProd;
+	private WebElement clickOnLink;
 
 	@AndroidFindBy(xpath = "")
-	private WebElement verifyTrackingInformationPage;
-	
-	@AndroidFindBy(xpath="")
-	private WebElement CheckProdStatus;
+	private WebElement verifyPage;
 
-	// Methods------------------------------
+	@AndroidFindBy(xpath = "")
+	private WebElement CancelBtn;
 
+	@AndroidFindBy(xpath = "")
+	private WebElement DownloadBtn;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement verifydDownloadsPage;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement OpenFile;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement verifyOpenedFileProduct;
+
+	@AndroidFindBy(xpath = "")
+	private WebElement closeBtn;
+
+	// Methods---------------------------------------------------
 }
